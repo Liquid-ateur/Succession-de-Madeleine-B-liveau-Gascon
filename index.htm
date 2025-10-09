@@ -12,16 +12,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-		
-		.titre-centre {
-		    text-align: center;
-		}
 
         /* Main table container with horizontal scroll */
         .table-container {
-            /* overflow-y: auto; /* Enable vertical scrolling */
             /* overflow-x: auto; */
             margin: 20px;
+			position: relative;
         }
 
         /* Table structure */
@@ -36,7 +32,20 @@
             
         }
 
-        th, td {
+        thead {
+		    top: 0;
+		    position: sticky;
+		}
+
+        th {
+		    padding: 10px;
+			background-color: #f4f4f4;
+			border: 1px solid #ddd;
+			font-weight: bold;
+			text-align: center;
+	    }
+		
+        tbody td {
             padding: 10px;
             border: 1px solid #ddd;
             text-align: center;
@@ -58,49 +67,28 @@
                 width: 408px;
             }
         }
-
-        /* Ensure the table headers are fixed and visible */
-        th {
-            position: sticky;
-            top: 0;
-            background-color: #f4f4f4;
-			font-weight: bold;
-	    /* Ensure header stays above content during scroll */
-            /* z-index: 1; */
-        }
 		
-		/* Styles for table headers */
-/*        .header1 {
-            background-color: #f0f0f0;
-            font-weight: bold;
-*/
-        /* Styles for table headers */
-/*        .header2 {
-            background-color: #f0f0f0;
-            font-weight: bold;
-*/			
-        }
+		.header1 {
+
+		}
+		
+		.header2 {
+
+		}
     </style>
 </head>
 <body>
-    <input type="file" id="fileInput">
-    
-<!--	<div class="upper-container">
-		<h1 class="titre-centre">Souvenirs de Madeleine Béliveau Gascon</h1>
-		<p>
-    </div>
--->
     <div class="table-container">
         <table id="data-table">
             <thead>
 			   <tr class="header1">
-			       <th colspan="4" width="2000px;">Souvenirs de Madeleine Béliveau Gascon</th>
+			       <th colspan="4">Souvenirs de Madeleine Béliveau Gascon</th>
 			   </tr>
                <tr class="header2">
-                   <th width="100px;">Numéro d'item</th>
-                   <th>Image</th>
-                   <th width="800px;">Description</th>
-                   <th width="100px;">Valeur de revente</th>
+                   <th>Numéro d'item</th>
+                   <th class="image-column">Image</th>
+                   <th>Description</th>
+                   <th>Valeur de revente</th>
 
                     <!-- These columns will be dynamically filled based on the names -->
                </tr>
@@ -111,9 +99,7 @@
         </table>
     </div>
 
-    <script>
-	    // Reading files
-		const fileInput = document.getElementById('fileInput');
+    <script>	    
         // Sample image data (this would normally come from a database or API)
         const items = [
 
@@ -168,7 +154,7 @@
 */
         // Function to load the table dynamically
         function loadTable() {
-            const tableBody = document.querySelector('#data-table tbody');
+		    const tableBody = document.querySelector('#data-table tbody');
 /*
             // Create columns for each person dynamically
             let headerRow = document.querySelector('#data-table thead tr');
