@@ -64,31 +64,44 @@
             position: sticky;
             top: 0;
             background-color: #f4f4f4;
+			font-weight: bold;
 	    /* Ensure header stays above content during scroll */
             /* z-index: 1; */
         }
-
-        /* Styles for table headers */
-        .header {
+		
+		/* Styles for table headers */
+/*        .header1 {
             background-color: #f0f0f0;
             font-weight: bold;
+*/
+        /* Styles for table headers */
+/*        .header2 {
+            background-color: #f0f0f0;
+            font-weight: bold;
+*/			
         }
     </style>
 </head>
 <body>
     <input type="file" id="fileInput">
-    <div class="upper-container">
+    
+<!--	<div class="upper-container">
 		<h1 class="titre-centre">Souvenirs de Madeleine Béliveau Gascon</h1>
 		<p>
     </div>
+-->
     <div class="table-container">
         <table id="data-table">
             <thead>
-               <tr class="header">
+			   <tr class="header1">
+			       <th colspan="4" width="2000px;">Souvenirs de Madeleine Béliveau Gascon</th>
+			   </tr>
+               <tr class="header2">
                    <th width="100px;">Numéro d'item</th>
                    <th>Image</th>
                    <th width="800px;">Description</th>
                    <th width="100px;">Valeur de revente</th>
+
                     <!-- These columns will be dynamically filled based on the names -->
                </tr>
             </thead>
