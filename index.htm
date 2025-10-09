@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Répartition des biens de Madeleine Béliveau</title>
+    <title>Répartition des souvenirs de Madeleine Béliveau</title>
     <style>
+	    * {
+		    box-sizing: border-box;
+		}
+	
         /* General reset and styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
         }
+
+		.header-container {
+		    position: sticky;
+			/* z-index: 1; */
+		}
 
         /* Main table container with horizontal scroll */
         .table-container {
@@ -22,34 +31,41 @@
 
         /* Table structure */
         table {
-            width: 100%;
+            /* width: 100%; */
             border-collapse: collapse;
             table-layout: fixed;
         }
 
         tbody {
             overflow-y: auto;
+			border: 1px solid black;
             
         }
 
         thead {
 		    top: 0;
 		    position: sticky;
+			border: 2px solid black;
 		}
 
         th {
 		    padding: 10px;
 			background-color: #f4f4f4;
-			border: 1px solid #ddd;
+			/* border-color: black; */
 			font-weight: bold;
 			text-align: center;
 	    }
 		
         tbody td {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid black;
+			/* border-color: black; */
             text-align: center;
         }
+		
+		.numitem-column {
+		    width: 100px;
+		}
 
         /* Image styling */
         .image-column img {
@@ -68,25 +84,22 @@
             }
         }
 		
-		.header1 {
-
-		}
-		
-		.header2 {
-
+		p {
+		    font-size: 200%;
 		}
     </style>
 </head>
 <body>
+    <div class="header-container">
+	   <p style="text-align:center" font-size="24px"><b>Souvenirs de Madeleine Béliveau Gascon</b></p>
+	</div>
+	<br>
     <div class="table-container">
         <table id="data-table">
             <thead>
-			   <tr class="header1">
-			       <th colspan="4">Souvenirs de Madeleine Béliveau Gascon</th>
-			   </tr>
-               <tr class="header2">
-                   <th>Numéro d'item</th>
-                   <th class="image-column">Image</th>
+               <tr class="header">
+                   <th class="numitem-column">Numéro d'item</th>
+                   <th>Image</th>
                    <th>Description</th>
                    <th>Valeur de revente</th>
 
@@ -102,7 +115,6 @@
     <script>	    
         // Sample image data (this would normally come from a database or API)
         const items = [
-
             {	NumItem: "001", image: "images/16.jpg", description: "Bracelet or jaune 14 karats (poinçonné) longueur totale de 18 cm.  Cinq beloques (1 plaqué or) (4 or jaune 10 karats) et une or jaune 14 karats. Poids total de 22.86 rammes.", valeur: "727,00$" },
             {	NumItem: "002", image: "images/01.jpg", description: "Bracelet en or jaune 10 karats. Maille de style gourmette de 10.7mm de largeur. Longueur total de 22.5mm. Poids total de 19.47 grammes.", valeur: "428,00$" },
             {	NumItem: "003", image: "images/13.jpg", description: "Chaîne et pendentif en or 10 karats. Maille de style cubique de 1.6mm de taille carré un diamètre de 50 cm. Pendentif style camé en or jaune ‘profil de jeune femme’ serti de 6 diamants. Poids total des diamants de 0.035 carat. Poids total du bijoux de 14.36 grammes.", valeur: "315,00$" },
@@ -170,6 +182,7 @@
 
                 // Numéro d'item
                 let td = document.createElement('td');
+				td.classList.add('numitem-column');
                 td.textContent = item.NumItem;
                 tr.appendChild(td);
 
