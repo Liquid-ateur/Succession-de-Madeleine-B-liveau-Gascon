@@ -91,8 +91,7 @@
 </head>
 <body>
     <div class="header-container">
-	    <p style="text-align:center" font-size="24px"><b>Souvenirs de Madeleine Béliveau Gascon</b></p>
-		<p style:"text-align-center" font-size="16px">Les valeurs marquées d'une astérisque indiquent des évaluations par le bijoutier Éric Aird tandis que les autres bijoux ont été classés comme "bijoux mode" par le même bijoutier.</p>
+	   <p style="text-align:center" font-size="24px"><b>Souvenirs de Madeleine Béliveau Gascon</b></p>
 	</div>
 	<br>
     <div class="table-container">
@@ -116,49 +115,59 @@
     <script>	    
         // Sample image data (this would normally come from a database or API)
         const items = [
-            {	NumItem: "001", image: "images/16.jpg", description: "Bracelet or jaune 14 karats (poinçonné) longueur totale de 18 cm.  Cinq beloques (1 plaqué or) (4 or jaune 10 karats) et une or jaune 14 karats. Poids total de 22.86 rammes.", valeur: "* 727,00$" },
-            {	NumItem: "002", image: "images/01.jpg", description: "Bracelet en or jaune 10 karats. Maille de style gourmette de 10.7mm de largeur. Longueur total de 22.5mm. Poids total de 19.47 grammes.", valeur: "* 428,00$" },
-            {	NumItem: "003", image: "images/13.jpg", description: "Chaîne et pendentif en or 10 karats. Maille de style cubique de 1.6mm de taille carré un diamètre de 50 cm. Pendentif style camé en or jaune ‘profil de jeune femme’ serti de 6 diamants. Poids total des diamants de 0.035 carat. Le poids total du bijoux, incluant deux mailles détachées, est de 14.36 grammes.", valeur: "* 315,00$" },
-            {	NumItem: "004", image: "images/14.jpg", description: "Bague en or jaune 14 karats sertie de trois diamants de taille rond. Un de 0.30 carat pureté SI Couleur G-H/ Un autre de 0.15 carat Pureté SI Couleur G-H et un autre de 0.10 carat Pureté 12 Couleur I-J. Poids total de la bague 6 grammes.", valeur: "* 305,00$" },
-            {	NumItem: "005", image: "images/15.jpg", description: "Collier fait de 2 rangs de perles (157) d'eau douce de 5mm et de 3 rangs de billes d'or 10 karats 120 billes de 2.8 mm et de 118 billes de 4mm. Fermoir or jaune 10 karats. Longueur total du collier de 40cm.", valeur: "* 211,00$" },
-            {	NumItem: "006", image: "images/03.jpg", description: "Chaîne en or blanc 18 karats. maille de style gourmette de 1.3mm de largeur. Longueur total de 60 cm. Poids total de 5.35 grammes.", valeur: "* 208,00$" },
+            {	NumItem: "001", image: "images/16.jpg", description: "Bracelet or jaune 14 karats (poinçonné) longueur totale de 18 cm.  Cinq beloques (1 plaqué or) (4 or jaune 10 karats) et une or jaune 14 karats. Poids total de 22.86 rammes.", valeur: "727,00$" },
+            {	NumItem: "002", image: "images/01.jpg", description: "Bracelet en or jaune 10 karats. Maille de style gourmette de 10.7mm de largeur. Longueur total de 22.5mm. Poids total de 19.47 grammes.", valeur: "428,00$" },
+            {	NumItem: "003", image: "images/13.jpg", description: "Chaîne et pendentif en or 10 karats. Maille de style cubique de 1.6mm de taille carré un diamètre de 50 cm. Pendentif style camé en or jaune ‘profil de jeune femme’ serti de 6 diamants. Poids total des diamants de 0.035 carat. Poids total du bijoux de 14.36 grammes.", valeur: "315,00$" },
+            {	NumItem: "004", image: "images/14.jpg", description: "Bague en or jaune 14 karats sertie de trois diamants de taille rond. Un de 0.30 carat pureté SI Couleur G-H/ Un autre de 0.15 carat Pureté SI Couleur G-H et un autre de 0.10 carat Pureté 12 Couleur I-J. Poids total de la bague 6 grammes.", valeur: "305,00$" },
+            {	NumItem: "005", image: "images/15.jpg", description: "Collier fait de 2 rangs de perles (157) d'eau douce de 5mm et de 3 rangs de billes d'or 10 karats 120 billes de 2.8 mm et de 118 billes de 4mm. Fermoir or jaune 10 karats. Longueur total du collier de 40cm.", valeur: "211,00$" },
+            {	NumItem: "006", image: "images/03.jpg", description: "Chaîne en or blanc 18 karats. maille de style gourmette de 1.3mm de largeur. Longueur total de 60 cm. Poids total de 5.35 grammes.", valeur: "208,00$" },
             {	NumItem: "007", image: "images/BeliveauGrandsParents.jpg", description: "Hermann Béliveau et Antoinette Cossette", valeur: "200,00$" },
-            {	NumItem: "008", image: "images/08.jpg", description: "Chaîne (10k) et pendentif (18k) en or jaune. Chaîne de type gourmette torsadée de 1.9mm de large en or jaune 10 karats longueur total de la chaine 40 cm. Pendentif or jaune 18 karats en forme d'horloge cou-cou. Poids total du bijoux 5.2 grammes.", valeur: "* 152,00$" },
-            {	NumItem: "009", image: "images/CanardMuranoBleuBlanc.JPG", description: "Canard verre de Murano bleu et blanc", valeur: "150,00$" },
-            {	NumItem: "010", image: "images/CanardMuranoGrisArgent.JPG", description: "Canard verre de Murano gris et argenté", valeur: "150,00$" },
-            {	NumItem: "011", image: "images/Cadre1OiseauLucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 1", valeur: "150,00$" },
-            {	NumItem: "012", image: "images/07.jpg", description: "Bague pour homme en or jaune 10 karats sertie d'un diamant de 0.015 carat et de 4 diamants de 0.005 carat chacun. Pureté S12 Couleur H. Poids total de 5 grammes.", valeur: "* 110,00$" },
-            {	NumItem: "013", image: "images/BibelotChefAutochtone.JPG", description: "Statuette Chef Autochtone en céramique.", valeur: "100,00$" },
-            {	NumItem: "014", image: "images/JumentPoulainBronze.JPG", description: "Bronze Jument et poulain doré", valeur: "100,00$" },
-            {	NumItem: "015", image: "images/Cadre2OiseauLucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 1", valeur: "100,00$" },
-            {	NumItem: "016", image: "images/11.jpg", description: "Bague dame en or jaune 10 karats sertie d'une aigue marine de taille ovale de 7.8mm x 6mm et de 12 zircon cubique de 1.8mm. Poids total de 5.33 grammes.", valeur: "* 99,00$" },
-            {	NumItem: "017", image: "images/09.jpg", description: "Bague dame or jaune 10 Karats sertie d'une onyx et d'un camé en or ‘profil de jeune fille’. Poids total de la bague 5.2 Ngrammes.", valeur: "* 95,00$" },
-            {	NumItem: "018", image: "images/18.jpg", description: "Paire de boucles d’oreilles or jaune 10 karats (poinçonné) sertie de camé en plastique.  Fermoir tiges et papillons.  Poids total de 2.84 grammes.  Pendentif or jaune 10 karats (poinçonné) serti de camé en plastique. Poids total de 1.65 grammes.", valeur: "* 90,00$" },
-            {	NumItem: "019", image: "images/02.jpg", description: "Chaîne en or jaune 10 karats maille plate de 1.5mm de largeur. Longueur total de 48 cm. Poids total de 3.45 grammes.", valeur: "* 75,00$" },
-            {	NumItem: "020", image: "images/17.jpg", description: "Chaîne en or jaune 10 karats ‘Femoir’ 10K (poinçonné) mailles cubes.  Longueur totales de 38 cm. Poids total du bijou 2.71 grammes.", valeur: "* 65,00$" },
-            {	NumItem: "021", image: "images/04.jpg", description: "Médaille en or jaune 10 karats Signe zodiaque du Gémeaux. Diamètre de 27 mm. Poids total de 2.74 grammes.", valeur: "* 65,00$" },
-            {	NumItem: "022", image: "images/12.jpg", description: "Bague en or jaune 10 karats sertie de zircon cubique de 1x 5.95mm et de 7x 2mm. Poids total de la bague 3.11 grammes.", valeur: "* 60,00$" },
-            {	NumItem: "023", image: "images/ElephantBronze.JPG", description: "Bronze Éléphant doré", valeur: "50,00$" },
-            {	NumItem: "024", image: "images/Cadre3LucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 1", valeur: "50,00$" },
-            {	NumItem: "025", image: "images/Lot A.jpg", description: "Lot A", valeur: "45,00$" },
-            {	NumItem: "026", image: "images/Lot B.jpg", description: "Lot B", valeur: "45,00$" },
-            {	NumItem: "027", image: "images/Lot C.jpg", description: "Lot C", valeur: "45,00$" },
-            {	NumItem: "028", image: "images/Lot D.jpg", description: "Lot D", valeur: "45,00$" },
-            {	NumItem: "029", image: "images/Lot E.jpg", description: "Lot E", valeur: "45,00$" },
-            {	NumItem: "030", image: "images/Lot F.jpg", description: "Lot F", valeur: "45,00$" },
-            {	NumItem: "031", image: "images/Lot G.jpg", description: "Lot G", valeur: "45,00$" },
-            {	NumItem: "032", image: "images/Lot H.jpg", description: "Lot H", valeur: "45,00$" },
-            {	NumItem: "033", image: "images/Lot I.jpg", description: "Lot I", valeur: "45,00$" },
-            {	NumItem: "034", image: "images/Lot J.jpg", description: "Lot J", valeur: "45,00$" },
-            {	NumItem: "035", image: "images/Lot K.jpg", description: "Lot K", valeur: "45,00$" },
-            {	NumItem: "036", image: "images/Lot L.jpg", description: "Lot L", valeur: "45,00$" },
-            {	NumItem: "037", image: "images/Lot M.jpg", description: "Lot M", valeur: "45,00$" },
-            {	NumItem: "038", image: "images/Lot N.jpg", description: "Lot N", valeur: "45,00$" },
-            {	NumItem: "039", image: "images/Lot O.jpg", description: "Lot O", valeur: "45,00$" },
-            {	NumItem: "040", image: "images/Lot P.jpg", description: "Lot P", valeur: "45,00$" },
-            {	NumItem: "041", image: "images/10.jpg", description: "Une boucle d'oreille or jaune 10k en forme de deux cœurs. Poids total de 2.04 grammes.", valeur: "* 44,00$" },
-            {	NumItem: "042", image: "images/06.jpg", description: "Bracelet or jaune 10 karats serti de 5 perles de culture de 5mm de diamètre. Poids total du bracelet de 1.7 grammes.", valeur: "* 26,00$" },
-            {	NumItem: "043", image: "images/05.jpg", description: "Croix or jaune 10 karats. Longueur de 4 cm. Poids total de 0.72 grammes.", valeur: "* 15,00$" }
+            {	NumItem: "008", image: "images/08.jpg", description: "Chaîne (10k) et pendentif (18k) en or jaune. Chaîne de type gourmette torsadée de 1.9mm de large en or jaune 10 karats longueur total de la chaine 40 cm. Pendentif or jaune 18 karats en forme d'horloge cou-cou. Poids total du bijoux 5.2 grammes.", valeur: "152,00$" },
+            
+			{	NumItem: "009", image: "images/CanardMuranoBleuBlanc.JPG", description: "Canard en verre de Murano bleu et blanc 29cm (Long) X 11cm (Large) X 13cm" (Haut)", valeur: "150,00$" },
+            {	NumItem: "010", image: "images/CanardMuranoGrisArgent.JPG", description: "Canard en verre de Murano gris et argenté 28cm (Long) X 12cm (Large) X 13cm" (Haut)", valeur: "150,00$" },
+            
+			{	NumItem: "011", image: "images/Cadre1OiseauLucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 85cm (Large) X 52cm (Haut)", valeur: "150,00$" },
+            
+			{	NumItem: "012", image: "images/07.jpg", description: "Bague pour homme en or jaune 10 karats sertie d'un diamant de 0.015 carat et de 4 diamants de 0.005 carat chacun. Poureté S12 Couleur H. Poids total de 5 grammes.", valeur: "110,00$" },
+            
+			{	NumItem: "013", image: "images/BibelotChefAutochtone.JPG", description: "Statuette Chef Autochtone en céramique 22cm (Long) X 7cm (Large) X 32cm (Haut)", valeur: "100,00$" },
+            {	NumItem: "014", image: "images/JumentPoulainBronze.JPG", description: "Statuette en métal de Jument et poulain doré 22cm (Long) X 13cm (Large) X 25cm" (Haut)", valeur: "100,00$" },
+            
+			{	NumItem: "015", image: "images/Cadre2OiseauLucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 54cm (Large) X 44cm (Haut)", valeur: "100,00$" },
+            
+			{	NumItem: "016", image: "images/11.jpg", description: "Bague dame en or jaune 10 karats sertie d'une aigue marine de taille ovale de 7.8mm x 6mm et de 12 zircon cubique de 1.8mm. Poids total de 5.33 grammes.", valeur: "99,00$" },
+            {	NumItem: "017", image: "images/09.jpg", description: "Bague dame or jaune 10 Karats sertie d'une onyx et d'un camé en or ‘profil de jeune fille’. Poids total de la bague 5.2 Ngrammes.", valeur: "95,00$" },
+            {	NumItem: "018", image: "images/18.jpg", description: "Paire de boucles d’oreilles or jaune 10 karats (poinçonné) sertie de camé en plastique.  Fermoir tiges et papillons.  Poids total de 2.84 grammes.  Pendentif or jaune 10 karats (poinçonné) serti de camé en plastique. Poids total de 1.65 grammes.", valeur: "90,00$" },
+            {	NumItem: "019", image: "images/02.jpg", description: "Chaîne en or jaune 10 karats maille plate de 1.5mm de largeur. Longueur total de 48 cm. Poids total de 3.45 grammes.", valeur: "75,00$" },
+            {	NumItem: "020", image: "images/17.jpg", description: "Chaîne en or jaune 10 karats ‘Femoir’ 10K (poinçonné) mailles cubes.  Longueur totales de 38 cm. Poids total du bijou 2.71 grammes.", valeur: "65,00$" },
+            {	NumItem: "021", image: "images/04.jpg", description: "Médaille en or jaune 10 karats Signe zodiaque du Gémeaux. Diamètre de 27 mm. Poids total de 2.74 grammes.", valeur: "65,00$" },
+            {	NumItem: "022", image: "images/12.jpg", description: "Bague en or jaune 10 karats sertie de zircon cubique de 1x 5.95mm et de 7x 2mm. Poids total de la bague 3.11 grammes.", valeur: "60,00$" },
+            
+			{	NumItem: "023", image: "images/ElephantBronze.JPG", description: "Éléphant en céramique 23cm (Long) X 17cm (Large) X 23cm" (Haut), valeur: "50,00$" },
+            
+			{	NumItem: "024", image: "images/Cadre3LucilleBeliveau.JPG", description: "Broderie japonaise de Lucille Béliveau 46cm (Large) X 38cm (Haut)", valeur: "50,00$" },
+            
+			{	NumItem: "025", image: "images/Lot A.jpg", description: "Mode A", valeur: "45,00$" },
+            {	NumItem: "026", image: "images/Lot B.jpg", description: "Mode B", valeur: "45,00$" },
+            {	NumItem: "027", image: "images/Lot C.jpg", description: "Mode C", valeur: "45,00$" },
+            {	NumItem: "028", image: "images/Lot D.jpg", description: "Mode D", valeur: "45,00$" },
+            {	NumItem: "029", image: "images/Lot E.jpg", description: "Mode E", valeur: "45,00$" },
+            {	NumItem: "030", image: "images/Lot F.jpg", description: "Mode F", valeur: "45,00$" },
+            {	NumItem: "031", image: "images/Lot G.jpg", description: "Mode G", valeur: "45,00$" },
+            {	NumItem: "032", image: "images/Lot H.jpg", description: "Mode H", valeur: "45,00$" },
+            {	NumItem: "033", image: "images/Lot I.jpg", description: "Mode I", valeur: "45,00$" },
+            {	NumItem: "034", image: "images/Lot J.jpg", description: "Mode J", valeur: "45,00$" },
+            {	NumItem: "035", image: "images/Lot K.jpg", description: "Mode K", valeur: "45,00$" },
+            {	NumItem: "036", image: "images/Lot L.jpg", description: "Mode L", valeur: "45,00$" },
+            {	NumItem: "037", image: "images/Lot M.jpg", description: "Mode M", valeur: "45,00$" },
+            {	NumItem: "038", image: "images/Lot N.jpg", description: "Mode N", valeur: "45,00$" },
+            {	NumItem: "039", image: "images/Lot O.jpg", description: "Mode O", valeur: "45,00$" },
+            {	NumItem: "040", image: "images/Lot P.jpg", description: "Mode P", valeur: "45,00$" },
+            {	NumItem: "041", image: "images/10.jpg", description: "Une boucle d'oreille or jaune 10k en forme de deux cœurs. Poids total de 2.04 grammes.", valeur: "44,00$" },
+            
+			{	NumItem: "042", image: "images/06.jpg", description: "Bracelet or jaune 10 karats serti de 5 perles de culture de 5mm de diamètre. Poids total du bracelet de 1.7 grammes.", valeur: "26,00$" },
+            {	NumItem: "043", image: "images/05.jpg", description: "Croix or jaune 10 karats. Longueur de 4 cm. Poids total de 0.72 grammes.", valeur: "15,00$" }
         ];
 
 /*
