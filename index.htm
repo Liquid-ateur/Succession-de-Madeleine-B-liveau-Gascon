@@ -31,7 +31,7 @@
         .table-container {
             /* overflow-x: auto; */
             margin: 20px;
-			position: relative;
+			position: sticky;
         }
 
         /* Table structure */
@@ -221,6 +221,10 @@
 */
                 tableBody.appendChild(tr);
             });
+			const tableContainer = document.querySelector('.table-container');
+			const headerContainer = document.querySelector('.header-container');
+			tableContainer.style.position = 'sticky';
+			tableContainer.style.top = headerContainer.height;
         }
 
         // Load the table on page load
